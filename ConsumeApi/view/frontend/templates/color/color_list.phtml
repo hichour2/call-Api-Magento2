@@ -1,0 +1,24 @@
+<div>
+    <h2>Colors List</h2>
+
+    <table>
+        <thead>
+            <th>Id</th>
+            <th>Name</th>
+            <th>Year</th>
+            <th>Color</th>
+            <th>Pantone Value</th>
+        </thead>
+            <tbody>
+                <?php foreach ($block->getColorList() as $item) :?>
+                    <tr>
+                        <td><?=  $item->getId() ?></td>
+                        <td><?=  $item->getName() ?></td>
+                        <td><?=  $item->getYear() ?></td>
+                        <td  style="background:<?=  $item->getColor() ?>"><?=  $item->getColor() ?></td>
+                        <td><?=  $item->getPantoneValue() ?></td>
+                    </tr>
+                <?php endforeach;?>
+            </tbody>
+    </table>
+</div>
